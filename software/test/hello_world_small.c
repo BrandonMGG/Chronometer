@@ -24,9 +24,14 @@ static void timer_isr(void *context)
 	IOWR_ALTERA_AVALON_PIO_DATA(PIO_0_BASE, leds);
 	display = displayShow(digit);
 	digit+=1;
-
-	IOWR_ALTERA_AVALON_PIO_DATA(SEVEN_SEG0_BASE, display);
-	IOWR_ALTERA_AVALON_PIO_DATA(SEVEN_SEG1_BASE, display2);
+ if((IORD_ALTERA_AVALON_PIO_DATA(SWITCH_BASE) & 1)){
+	 IOWR_ALTERA_AVALON_PIO_DATA(SEVEN_SEG0_BASE, display);
+	 IOWR_ALTERA_AVALON_PIO_DATA(SEVEN_SEG1_BASE, display2);
+ }
+	IOWR_ALTERA_AVALON_PIO_DATA(SEVEN_SEG2_BASE, display3);
+	IOWR_ALTERA_AVALON_PIO_DATA(SEVEN_SEG3_BASE, display4);
+	IOWR_ALTERA_AVALON_PIO_DATA(SEVEN_SEG4_BASE, display5);
+	IOWR_ALTERA_AVALON_PIO_DATA(SEVEN_SEG5_BASE, display6);
 	IOWR_ALTERA_AVALON_TIMER_STATUS(TIMER_0_BASE, 0);
 }
 int displayShow(int counter){
@@ -60,6 +65,7 @@ int displayShow(int counter){
 int displayShow2(int counter){
 	if (digit2 == 0) {
 		    display2 = 64;
+		    display3 = displayShow3(digit3);
 		} else if (digit2 == 1) {
 		    display2 = 121;
 		} else if (digit2 == 2) {
@@ -70,9 +76,110 @@ int displayShow2(int counter){
 		    display2 = 25;
 		} else if (digit2 == 5) {
 		    display2 = 18;
+		} else if (digit2 == 6) {
+		    display2 = 2;
+		} else if (digit2 == 7) {
+		    display2 = 120;
+		} else if (digit2 == 8) {
+		    display2 = 0;
+		} else if (digit2 == 9 ) {
+		    display2 = 24;
+		    digit3+=1;
 		    digit2=-1;
 		}
 		return display2;
+}
+int displayShow3(int counter){
+	if (digit3 == 0) {
+	    display3 = 64;
+	    display4 = displayShow4(digit4);
+	} else if (digit3 == 1) {
+		display3 = 121;
+	} else if (digit3 == 2) {
+		display3 = 36;
+	} else if (digit3 == 3) {
+		display3 = 48;
+	} else if (digit3 == 4) {
+		display3 = 25;
+	} else if (digit3 == 5) {
+		display3 = 18;
+	} else if (digit3 == 6) {
+		display3 = 2;
+	} else if (digit3 == 7) {
+		display3 = 120;
+	} else if (digit3 == 8) {
+		display3 = 0;
+	} else if (digit3 == 9 ) {
+		display3 = 24;
+	    digit3=-1;
+
+	    digit4+=1;
+	}
+	return display3;
+}
+int displayShow4(int counter){
+	if (digit4 == 0) {
+		    display4 = 64;
+		    display5 = displayShow5(digit5);
+		} else if (digit4 == 1) {
+			display4 = 121;
+		} else if (digit4 == 2) {
+			display4 = 36;
+		} else if (digit4 == 3) {
+			display4 = 48;
+		} else if (digit4 == 4) {
+			display4 = 25;
+		} else if (digit4 == 5) {
+			display4 = 18;
+			digit5+=1;
+		    digit4=-1;
+		}
+		return display4;
+}
+int displayShow5(int counter){
+	if (digit5 == 0) {
+	    display5 = 64;
+	    display6 = displayShow6(digit6);
+	} else if (digit5 == 1) {
+		display5 = 121;
+	} else if (digit5 == 2) {
+		display5 = 36;
+	} else if (digit5 == 3) {
+		display5 = 48;
+	} else if (digit5 == 4) {
+		display5 = 25;
+	} else if (digit5 == 5) {
+		display5 = 18;
+	} else if (digit5 == 6) {
+		display5 = 2;
+	} else if (digit5 == 7) {
+		display5 = 120;
+	} else if (digit5 == 8) {
+		display5 = 0;
+	} else if (digit5 == 9 ) {
+		display5 = 24;
+	    digit5=-1;
+
+	    digit6+=1;
+	}
+	return display5;
+}
+int displayShow6(int counter){
+	if (digit6 == 0) {
+		    display6 = 64;
+		} else if (digit6 == 1) {
+		    display6 = 121;
+		} else if (digit6 == 2) {
+		    display6 = 36;
+		} else if (digit6 == 3) {
+		    display6 = 48;
+		} else if (digit6 == 4) {
+		    display6 = 25;
+		} else if (digit6 == 5) {
+		    display6 = 18;
+		    digit6=-1;
+		}
+		return display6;
 }
 int main(){
 	alt_ic_isr_register(

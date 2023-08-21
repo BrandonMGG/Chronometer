@@ -4,7 +4,7 @@
  * Machine generated for CPU 'CPU' in SOPC Builder design 'platform'
  * SOPC Builder design path: ../../platform.sopcinfo
  *
- * Generated: Sun Aug 20 23:48:06 CST 2023
+ * Generated: Mon Aug 21 02:21:28 CST 2023
  */
 
 /*
@@ -467,15 +467,15 @@
 #define TIMER_0_FREQ 50000000
 #define TIMER_0_IRQ 0
 #define TIMER_0_IRQ_INTERRUPT_CONTROLLER_ID 0
-#define TIMER_0_LOAD_VALUE 49999999
-#define TIMER_0_MULT 1.0
+#define TIMER_0_LOAD_VALUE 499999
+#define TIMER_0_MULT 0.001
 #define TIMER_0_NAME "/dev/timer_0"
-#define TIMER_0_PERIOD 1
-#define TIMER_0_PERIOD_UNITS "s"
+#define TIMER_0_PERIOD 10
+#define TIMER_0_PERIOD_UNITS "ms"
 #define TIMER_0_RESET_OUTPUT 0
 #define TIMER_0_SNAPSHOT 0
 #define TIMER_0_SPAN 32
-#define TIMER_0_TICKS_PER_SEC 1
+#define TIMER_0_TICKS_PER_SEC 100
 #define TIMER_0_TIMEOUT_PULSE_OUTPUT 0
 #define TIMER_0_TYPE "altera_avalon_timer"
 

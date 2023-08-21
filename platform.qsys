@@ -244,7 +244,7 @@
       }
       datum sopceditor_expanded
       {
-         value = "0";
+         value = "1";
          type = "boolean";
       }
    }
@@ -683,8 +683,8 @@
   <parameter name="alwaysRun" value="true" />
   <parameter name="counterSize" value="32" />
   <parameter name="fixedPeriod" value="true" />
-  <parameter name="period" value="1" />
-  <parameter name="periodUnits" value="SEC" />
+  <parameter name="period" value="10" />
+  <parameter name="periodUnits" value="MSEC" />
   <parameter name="resetOutput" value="false" />
   <parameter name="snapshot" value="false" />
   <parameter name="systemFrequency" value="50000000" />

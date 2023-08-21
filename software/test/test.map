@@ -121,7 +121,7 @@ LOAD e:/basura/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/
                 0x0000000000004180                PROVIDE (__ram_exceptions_end, ABSOLUTE (.))
                 0x0000000000004020                PROVIDE (__flash_exceptions_start, LOADADDR (.exceptions))
 
-.text           0x0000000000004180      0x4dc
+.text           0x0000000000004180      0x870
                 [!provide]                        PROVIDE (stext, ABSOLUTE (.))
  *(.interp)
  *(.hash)
@@ -168,44 +168,48 @@ LOAD e:/basura/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/
  *(.text .stub .text.* .gnu.linkonce.t.*)
  .text          0x0000000000004180       0x3c ../test_bsp//obj/HAL/src/crt0.o
                 0x0000000000004180                _start
- .text          0x00000000000041bc      0x1c4 obj/default/hello_world_small.o
-                0x00000000000041bc                displayShow2
-                0x0000000000004230                displayShow
- .text.startup  0x0000000000004380       0x34 obj/default/hello_world_small.o
-                0x0000000000004380                main
- .text          0x00000000000043b4       0x8c ../test_bsp/\libhal_bsp.a(alt_iic.o)
-                0x00000000000043b4                alt_ic_isr_register
-                0x00000000000043b8                alt_ic_irq_enable
-                0x00000000000043f0                alt_ic_irq_disable
-                0x0000000000004428                alt_ic_irq_enabled
- .text          0x0000000000004440       0x68 ../test_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
-                0x0000000000004440                alt_iic_isr_register
- .text          0x00000000000044a8        0x0 ../test_bsp/\libhal_bsp.a(alt_irq_entry.o)
- .text          0x00000000000044a8        0x0 ../test_bsp/\libhal_bsp.a(alt_irq_handler.o)
- .text          0x00000000000044a8        0x0 ../test_bsp/\libhal_bsp.a(alt_irq_vars.o)
- .text          0x00000000000044a8       0xe0 ../test_bsp/\libhal_bsp.a(alt_load.o)
-                0x00000000000044a8                alt_load
- .text          0x0000000000004588       0x2c ../test_bsp/\libhal_bsp.a(alt_main.o)
-                0x0000000000004588                alt_main
- .text          0x00000000000045b4       0x24 ../test_bsp/\libhal_bsp.a(alt_sys_init.o)
-                0x00000000000045b4                alt_irq_init
-                0x00000000000045d4                alt_sys_init
- .text          0x00000000000045d8        0x4 ../test_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
-                0x00000000000045d8                alt_dcache_flush_all
- .text          0x00000000000045dc        0x0 ../test_bsp/\libhal_bsp.a(alt_exception_entry.o)
- .text          0x00000000000045dc        0x4 ../test_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
-                0x00000000000045dc                alt_icache_flush_all
- .text          0x00000000000045e0       0x74 ../test_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
-                0x00000000000045e0                alt_exception_cause_generated_bad_addr
- .text          0x0000000000004654        0x8 ../test_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
-                0x0000000000004654                altera_nios2_gen2_irq_init
+ .text          0x00000000000041bc      0x558 obj/default/hello_world_small.o
+                0x00000000000041bc                displayShow6
+                0x0000000000004230                displayShow5
+                0x0000000000004314                displayShow4
+                0x00000000000043b8                displayShow3
+                0x000000000000449c                displayShow2
+                0x0000000000004580                displayShow
+ .text.startup  0x0000000000004714       0x34 obj/default/hello_world_small.o
+                0x0000000000004714                main
+ .text          0x0000000000004748       0x8c ../test_bsp/\libhal_bsp.a(alt_iic.o)
+                0x0000000000004748                alt_ic_isr_register
+                0x000000000000474c                alt_ic_irq_enable
+                0x0000000000004784                alt_ic_irq_disable
+                0x00000000000047bc                alt_ic_irq_enabled
+ .text          0x00000000000047d4       0x68 ../test_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+                0x00000000000047d4                alt_iic_isr_register
+ .text          0x000000000000483c        0x0 ../test_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .text          0x000000000000483c        0x0 ../test_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .text          0x000000000000483c        0x0 ../test_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .text          0x000000000000483c       0xe0 ../test_bsp/\libhal_bsp.a(alt_load.o)
+                0x000000000000483c                alt_load
+ .text          0x000000000000491c       0x2c ../test_bsp/\libhal_bsp.a(alt_main.o)
+                0x000000000000491c                alt_main
+ .text          0x0000000000004948       0x24 ../test_bsp/\libhal_bsp.a(alt_sys_init.o)
+                0x0000000000004948                alt_irq_init
+                0x0000000000004968                alt_sys_init
+ .text          0x000000000000496c        0x4 ../test_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+                0x000000000000496c                alt_dcache_flush_all
+ .text          0x0000000000004970        0x0 ../test_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .text          0x0000000000004970        0x4 ../test_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+                0x0000000000004970                alt_icache_flush_all
+ .text          0x0000000000004974       0x74 ../test_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+                0x0000000000004974                alt_exception_cause_generated_bad_addr
+ .text          0x00000000000049e8        0x8 ../test_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+                0x00000000000049e8                altera_nios2_gen2_irq_init
  *(.gnu.warning.*)
  *(.fini)
                 [!provide]                        PROVIDE (__etext, ABSOLUTE (.))
                 [!provide]                        PROVIDE (_etext, ABSOLUTE (.))
                 [!provide]                        PROVIDE (etext, ABSOLUTE (.))
  *(.eh_frame_hdr)
-                0x000000000000465c                . = ALIGN (0x4)
+                0x00000000000049f0                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__preinit_array_start, ABSOLUTE (.))
  *(.preinit_array)
                 [!provide]                        PROVIDE (__preinit_array_end, ABSOLUTE (.))
@@ -227,18 +231,18 @@ LOAD e:/basura/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/
  *(SORT(.dtors.*))
                 [!provide]                        PROVIDE (__DTOR_END__, ABSOLUTE (.))
  *(.jcr)
-                0x000000000000465c                . = ALIGN (0x4)
+                0x00000000000049f0                . = ALIGN (0x4)
 
-.rodata         0x0000000000000000        0x0 load address 0x000000000000465c
+.rodata         0x0000000000000000        0x0 load address 0x00000000000049f0
                 0x0000000000000000                PROVIDE (__ram_rodata_start, ABSOLUTE (.))
                 0x0000000000000000                . = ALIGN (0x4)
  *(.rodata .rodata.* .gnu.linkonce.r.*)
  *(.rodata1)
                 0x0000000000000000                . = ALIGN (0x4)
                 0x0000000000000000                PROVIDE (__ram_rodata_end, ABSOLUTE (.))
-                0x000000000000465c                PROVIDE (__flash_rodata_start, LOADADDR (.rodata))
+                0x00000000000049f0                PROVIDE (__flash_rodata_start, LOADADDR (.rodata))
 
-.rwdata         0x0000000000000000        0x8 load address 0x000000000000465c
+.rwdata         0x0000000000000000        0x8 load address 0x00000000000049f0
                 0x0000000000000000                PROVIDE (__ram_rwdata_start, ABSOLUTE (.))
                 0x0000000000000000                . = ALIGN (0x4)
  *(.got.plt)
@@ -272,64 +276,64 @@ LOAD e:/basura/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/
                 0x0000000000000008                _edata = ABSOLUTE (.)
                 [!provide]                        PROVIDE (edata, ABSOLUTE (.))
                 0x0000000000000008                PROVIDE (__ram_rwdata_end, ABSOLUTE (.))
-                0x000000000000465c                PROVIDE (__flash_rwdata_start, LOADADDR (.rwdata))
+                0x00000000000049f0                PROVIDE (__flash_rwdata_start, LOADADDR (.rwdata))
 
-.bss            0x0000000000000008      0x124 load address 0x0000000000004664
+.bss            0x0000000000000008      0x144 load address 0x00000000000049f8
                 0x0000000000000008                __bss_start = ABSOLUTE (.)
                 [!provide]                        PROVIDE (__sbss_start, ABSOLUTE (.))
                 [!provide]                        PROVIDE (___sbss_start, ABSOLUTE (.))
  *(.dynsbss)
  *(.sbss .sbss.* .gnu.linkonce.sb.*)
- .sbss          0x0000000000000008       0x10 obj/default/hello_world_small.o
- .sbss          0x0000000000000018        0x4 ../test_bsp/\libhal_bsp.a(alt_irq_vars.o)
-                0x0000000000000018                alt_irq_active
- .sbss          0x000000000000001c        0xc ../test_bsp/\libhal_bsp.a(alt_main.o)
-                0x000000000000001c                alt_envp
-                0x0000000000000020                alt_argv
-                0x0000000000000024                alt_argc
- .sbss          0x0000000000000028        0x4 ../test_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
-                0x0000000000000028                alt_instruction_exception_handler
+ .sbss          0x0000000000000008       0x30 obj/default/hello_world_small.o
+ .sbss          0x0000000000000038        0x4 ../test_bsp/\libhal_bsp.a(alt_irq_vars.o)
+                0x0000000000000038                alt_irq_active
+ .sbss          0x000000000000003c        0xc ../test_bsp/\libhal_bsp.a(alt_main.o)
+                0x000000000000003c                alt_envp
+                0x0000000000000040                alt_argv
+                0x0000000000000044                alt_argc
+ .sbss          0x0000000000000048        0x4 ../test_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+                0x0000000000000048                alt_instruction_exception_handler
  *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
  *(.scommon)
                 [!provide]                        PROVIDE (__sbss_end, ABSOLUTE (.))
                 [!provide]                        PROVIDE (___sbss_end, ABSOLUTE (.))
  *(.dynbss)
  *(.bss .bss.* .gnu.linkonce.b.*)
- .bss           0x000000000000002c        0x0 ../test_bsp//obj/HAL/src/crt0.o
- .bss           0x000000000000002c        0x0 obj/default/hello_world_small.o
- .bss           0x000000000000002c        0x0 ../test_bsp/\libhal_bsp.a(alt_iic.o)
- .bss           0x000000000000002c        0x0 ../test_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
- .bss           0x000000000000002c        0x0 ../test_bsp/\libhal_bsp.a(alt_irq_entry.o)
- .bss           0x000000000000002c        0x0 ../test_bsp/\libhal_bsp.a(alt_irq_handler.o)
- .bss           0x000000000000002c        0x0 ../test_bsp/\libhal_bsp.a(alt_irq_vars.o)
- .bss           0x000000000000002c        0x0 ../test_bsp/\libhal_bsp.a(alt_load.o)
- .bss           0x000000000000002c        0x0 ../test_bsp/\libhal_bsp.a(alt_main.o)
- .bss           0x000000000000002c        0x0 ../test_bsp/\libhal_bsp.a(alt_sys_init.o)
- .bss           0x000000000000002c        0x0 ../test_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
- .bss           0x000000000000002c        0x0 ../test_bsp/\libhal_bsp.a(alt_exception_entry.o)
- .bss           0x000000000000002c        0x0 ../test_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
- .bss           0x000000000000002c        0x0 ../test_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
- .bss           0x000000000000002c        0x0 ../test_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .bss           0x000000000000004c        0x0 ../test_bsp//obj/HAL/src/crt0.o
+ .bss           0x000000000000004c        0x0 obj/default/hello_world_small.o
+ .bss           0x000000000000004c        0x0 ../test_bsp/\libhal_bsp.a(alt_iic.o)
+ .bss           0x000000000000004c        0x0 ../test_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .bss           0x000000000000004c        0x0 ../test_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .bss           0x000000000000004c        0x0 ../test_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .bss           0x000000000000004c        0x0 ../test_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .bss           0x000000000000004c        0x0 ../test_bsp/\libhal_bsp.a(alt_load.o)
+ .bss           0x000000000000004c        0x0 ../test_bsp/\libhal_bsp.a(alt_main.o)
+ .bss           0x000000000000004c        0x0 ../test_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .bss           0x000000000000004c        0x0 ../test_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .bss           0x000000000000004c        0x0 ../test_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .bss           0x000000000000004c        0x0 ../test_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .bss           0x000000000000004c        0x0 ../test_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .bss           0x000000000000004c        0x0 ../test_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
  *(COMMON)
- COMMON         0x000000000000002c      0x100 ../test_bsp/\libhal_bsp.a(alt_irq_handler.o)
-                0x000000000000002c                alt_irq
-                0x000000000000012c                . = ALIGN (0x4)
-                0x000000000000012c                __bss_end = ABSOLUTE (.)
+ COMMON         0x000000000000004c      0x100 ../test_bsp/\libhal_bsp.a(alt_irq_handler.o)
+                0x000000000000004c                alt_irq
+                0x000000000000014c                . = ALIGN (0x4)
+                0x000000000000014c                __bss_end = ABSOLUTE (.)
 
-.RAM            0x000000000000012c        0x0 load address 0x0000000000004664
+.RAM            0x000000000000014c        0x0 load address 0x00000000000049f8
                 [!provide]                        PROVIDE (_alt_partition_RAM_start, ABSOLUTE (.))
  *(.RAM .RAM. RAM.*)
-                0x000000000000012c                . = ALIGN (0x4)
+                0x000000000000014c                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (_alt_partition_RAM_end, ABSOLUTE (.))
-                0x000000000000012c                _end = ABSOLUTE (.)
-                0x000000000000012c                end = ABSOLUTE (.)
-                0x000000000000012c                __alt_stack_base = ABSOLUTE (.)
+                0x000000000000014c                _end = ABSOLUTE (.)
+                0x000000000000014c                end = ABSOLUTE (.)
+                0x000000000000014c                __alt_stack_base = ABSOLUTE (.)
                 [!provide]                        PROVIDE (_alt_partition_RAM_load_addr, LOADADDR (.RAM))
 
-.ROM            0x0000000000004664        0x0
+.ROM            0x00000000000049f8        0x0
                 [!provide]                        PROVIDE (_alt_partition_ROM_start, ABSOLUTE (.))
  *(.ROM .ROM. ROM.*)
-                0x0000000000004664                . = ALIGN (0x4)
+                0x00000000000049f8                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (_alt_partition_ROM_end, ABSOLUTE (.))
                 [!provide]                        PROVIDE (_alt_partition_ROM_load_addr, LOADADDR (.ROM))
 
@@ -415,109 +419,109 @@ LOAD e:/basura/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000     0x1392
+.debug_info     0x0000000000000000     0x14de
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000       0x6b ../test_bsp//obj/HAL/src/crt0.o
- .debug_info    0x000000000000006b      0x23f obj/default/hello_world_small.o
- .debug_info    0x00000000000002aa      0x38a ../test_bsp/\libhal_bsp.a(alt_iic.o)
- .debug_info    0x0000000000000634      0x232 ../test_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
- .debug_info    0x0000000000000866       0x74 ../test_bsp/\libhal_bsp.a(alt_irq_entry.o)
- .debug_info    0x00000000000008da      0x184 ../test_bsp/\libhal_bsp.a(alt_irq_handler.o)
- .debug_info    0x0000000000000a5e       0x88 ../test_bsp/\libhal_bsp.a(alt_irq_vars.o)
- .debug_info    0x0000000000000ae6      0x1c9 ../test_bsp/\libhal_bsp.a(alt_load.o)
- .debug_info    0x0000000000000caf      0x169 ../test_bsp/\libhal_bsp.a(alt_main.o)
- .debug_info    0x0000000000000e18      0x14d ../test_bsp/\libhal_bsp.a(alt_sys_init.o)
- .debug_info    0x0000000000000f65       0x92 ../test_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
- .debug_info    0x0000000000000ff7       0x7a ../test_bsp/\libhal_bsp.a(alt_exception_entry.o)
- .debug_info    0x0000000000001071       0x92 ../test_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
- .debug_info    0x0000000000001103      0x1fd ../test_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
- .debug_info    0x0000000000001300       0x92 ../test_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_info    0x000000000000006b      0x38b obj/default/hello_world_small.o
+ .debug_info    0x00000000000003f6      0x38a ../test_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_info    0x0000000000000780      0x232 ../test_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_info    0x00000000000009b2       0x74 ../test_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .debug_info    0x0000000000000a26      0x184 ../test_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_info    0x0000000000000baa       0x88 ../test_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .debug_info    0x0000000000000c32      0x1c9 ../test_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_info    0x0000000000000dfb      0x169 ../test_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_info    0x0000000000000f64      0x14d ../test_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_info    0x00000000000010b1       0x92 ../test_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_info    0x0000000000001143       0x7a ../test_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .debug_info    0x00000000000011bd       0x92 ../test_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_info    0x000000000000124f      0x1fd ../test_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_info    0x000000000000144c       0x92 ../test_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
 
-.debug_abbrev   0x0000000000000000      0xa58
+.debug_abbrev   0x0000000000000000      0xa49
  *(.debug_abbrev)
  .debug_abbrev  0x0000000000000000       0x12 ../test_bsp//obj/HAL/src/crt0.o
- .debug_abbrev  0x0000000000000012      0x11d obj/default/hello_world_small.o
- .debug_abbrev  0x000000000000012f      0x1a0 ../test_bsp/\libhal_bsp.a(alt_iic.o)
- .debug_abbrev  0x00000000000002cf      0x19c ../test_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
- .debug_abbrev  0x000000000000046b       0x12 ../test_bsp/\libhal_bsp.a(alt_irq_entry.o)
- .debug_abbrev  0x000000000000047d      0x120 ../test_bsp/\libhal_bsp.a(alt_irq_handler.o)
- .debug_abbrev  0x000000000000059d       0x40 ../test_bsp/\libhal_bsp.a(alt_irq_vars.o)
- .debug_abbrev  0x00000000000005dd       0xd8 ../test_bsp/\libhal_bsp.a(alt_load.o)
- .debug_abbrev  0x00000000000006b5       0xee ../test_bsp/\libhal_bsp.a(alt_main.o)
- .debug_abbrev  0x00000000000007a3       0xf6 ../test_bsp/\libhal_bsp.a(alt_sys_init.o)
- .debug_abbrev  0x0000000000000899       0x42 ../test_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
- .debug_abbrev  0x00000000000008db       0x12 ../test_bsp/\libhal_bsp.a(alt_exception_entry.o)
- .debug_abbrev  0x00000000000008ed       0x42 ../test_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
- .debug_abbrev  0x000000000000092f       0xe7 ../test_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
- .debug_abbrev  0x0000000000000a16       0x42 ../test_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_abbrev  0x0000000000000012      0x10e obj/default/hello_world_small.o
+ .debug_abbrev  0x0000000000000120      0x1a0 ../test_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_abbrev  0x00000000000002c0      0x19c ../test_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_abbrev  0x000000000000045c       0x12 ../test_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .debug_abbrev  0x000000000000046e      0x120 ../test_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_abbrev  0x000000000000058e       0x40 ../test_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .debug_abbrev  0x00000000000005ce       0xd8 ../test_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_abbrev  0x00000000000006a6       0xee ../test_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_abbrev  0x0000000000000794       0xf6 ../test_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_abbrev  0x000000000000088a       0x42 ../test_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_abbrev  0x00000000000008cc       0x12 ../test_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .debug_abbrev  0x00000000000008de       0x42 ../test_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_abbrev  0x0000000000000920       0xe7 ../test_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_abbrev  0x0000000000000a07       0x42 ../test_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
 
-.debug_line     0x0000000000000000      0x910
+.debug_line     0x0000000000000000      0x99e
  *(.debug_line)
  .debug_line    0x0000000000000000       0x66 ../test_bsp//obj/HAL/src/crt0.o
- .debug_line    0x0000000000000066       0xe5 obj/default/hello_world_small.o
- .debug_line    0x000000000000014b       0xf1 ../test_bsp/\libhal_bsp.a(alt_iic.o)
- .debug_line    0x000000000000023c       0xd6 ../test_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
- .debug_line    0x0000000000000312       0x6b ../test_bsp/\libhal_bsp.a(alt_irq_entry.o)
- .debug_line    0x000000000000037d       0xa5 ../test_bsp/\libhal_bsp.a(alt_irq_handler.o)
- .debug_line    0x0000000000000422       0x50 ../test_bsp/\libhal_bsp.a(alt_irq_vars.o)
- .debug_line    0x0000000000000472       0xa4 ../test_bsp/\libhal_bsp.a(alt_load.o)
- .debug_line    0x0000000000000516       0xbd ../test_bsp/\libhal_bsp.a(alt_main.o)
- .debug_line    0x00000000000005d3       0xdf ../test_bsp/\libhal_bsp.a(alt_sys_init.o)
- .debug_line    0x00000000000006b2       0x4e ../test_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
- .debug_line    0x0000000000000700       0xb3 ../test_bsp/\libhal_bsp.a(alt_exception_entry.o)
- .debug_line    0x00000000000007b3       0x4e ../test_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
- .debug_line    0x0000000000000801       0xbf ../test_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
- .debug_line    0x00000000000008c0       0x50 ../test_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_line    0x0000000000000066      0x173 obj/default/hello_world_small.o
+ .debug_line    0x00000000000001d9       0xf1 ../test_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_line    0x00000000000002ca       0xd6 ../test_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_line    0x00000000000003a0       0x6b ../test_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .debug_line    0x000000000000040b       0xa5 ../test_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_line    0x00000000000004b0       0x50 ../test_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .debug_line    0x0000000000000500       0xa4 ../test_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_line    0x00000000000005a4       0xbd ../test_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_line    0x0000000000000661       0xdf ../test_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_line    0x0000000000000740       0x4e ../test_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_line    0x000000000000078e       0xb3 ../test_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .debug_line    0x0000000000000841       0x4e ../test_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_line    0x000000000000088f       0xbf ../test_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_line    0x000000000000094e       0x50 ../test_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
 
-.debug_frame    0x0000000000000000      0x24c
+.debug_frame    0x0000000000000000      0x2c4
  *(.debug_frame)
- .debug_frame   0x0000000000000000       0x70 obj/default/hello_world_small.o
- .debug_frame   0x0000000000000070       0x50 ../test_bsp/\libhal_bsp.a(alt_iic.o)
- .debug_frame   0x00000000000000c0       0x30 ../test_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
- .debug_frame   0x00000000000000f0       0x34 ../test_bsp/\libhal_bsp.a(alt_irq_handler.o)
- .debug_frame   0x0000000000000124       0x30 ../test_bsp/\libhal_bsp.a(alt_load.o)
- .debug_frame   0x0000000000000154       0x2c ../test_bsp/\libhal_bsp.a(alt_main.o)
- .debug_frame   0x0000000000000180       0x3c ../test_bsp/\libhal_bsp.a(alt_sys_init.o)
- .debug_frame   0x00000000000001bc       0x20 ../test_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
- .debug_frame   0x00000000000001dc       0x20 ../test_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
- .debug_frame   0x00000000000001fc       0x30 ../test_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
- .debug_frame   0x000000000000022c       0x20 ../test_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_frame   0x0000000000000000       0xe8 obj/default/hello_world_small.o
+ .debug_frame   0x00000000000000e8       0x50 ../test_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_frame   0x0000000000000138       0x30 ../test_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_frame   0x0000000000000168       0x34 ../test_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_frame   0x000000000000019c       0x30 ../test_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_frame   0x00000000000001cc       0x2c ../test_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_frame   0x00000000000001f8       0x3c ../test_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_frame   0x0000000000000234       0x20 ../test_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_frame   0x0000000000000254       0x20 ../test_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_frame   0x0000000000000274       0x30 ../test_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_frame   0x00000000000002a4       0x20 ../test_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
 
-.debug_str      0x0000000000000000      0xa72
+.debug_str      0x0000000000000000      0xaa6
  *(.debug_str)
- .debug_str     0x0000000000000000      0x19e obj/default/hello_world_small.o
-                                        0x1e4 (size before relaxing)
- .debug_str     0x000000000000019e      0x141 ../test_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_str     0x0000000000000000      0x1d2 obj/default/hello_world_small.o
+                                        0x218 (size before relaxing)
+ .debug_str     0x00000000000001d2      0x141 ../test_bsp/\libhal_bsp.a(alt_iic.o)
                                         0x250 (size before relaxing)
- .debug_str     0x00000000000002df       0x37 ../test_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_str     0x0000000000000313       0x37 ../test_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
                                         0x20a (size before relaxing)
- .debug_str     0x0000000000000316       0x3a ../test_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_str     0x000000000000034a       0x3a ../test_bsp/\libhal_bsp.a(alt_irq_handler.o)
                                         0x194 (size before relaxing)
- .debug_str     0x0000000000000350       0x17 ../test_bsp/\libhal_bsp.a(alt_irq_vars.o)
+ .debug_str     0x0000000000000384       0x17 ../test_bsp/\libhal_bsp.a(alt_irq_vars.o)
                                         0x137 (size before relaxing)
- .debug_str     0x0000000000000367      0x113 ../test_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_str     0x000000000000039b      0x113 ../test_bsp/\libhal_bsp.a(alt_load.o)
                                         0x239 (size before relaxing)
- .debug_str     0x000000000000047a       0x8f ../test_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_str     0x00000000000004ae       0x8f ../test_bsp/\libhal_bsp.a(alt_main.o)
                                         0x1b2 (size before relaxing)
- .debug_str     0x0000000000000509       0x80 ../test_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_str     0x000000000000053d       0x80 ../test_bsp/\libhal_bsp.a(alt_sys_init.o)
                                         0x1f6 (size before relaxing)
- .debug_str     0x0000000000000589       0x1f ../test_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_str     0x00000000000005bd       0x1f ../test_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
                                         0x152 (size before relaxing)
- .debug_str     0x00000000000005a8       0x1f ../test_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_str     0x00000000000005dc       0x1f ../test_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
                                         0x152 (size before relaxing)
- .debug_str     0x00000000000005c7      0x48b ../test_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_str     0x00000000000005fb      0x48b ../test_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
                                         0x59d (size before relaxing)
- .debug_str     0x0000000000000a52       0x20 ../test_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_str     0x0000000000000a86       0x20 ../test_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
                                         0x159 (size before relaxing)
 
-.debug_loc      0x0000000000000000      0x456
+.debug_loc      0x0000000000000000      0x530
  *(.debug_loc)
- .debug_loc     0x0000000000000000       0x5b obj/default/hello_world_small.o
- .debug_loc     0x000000000000005b      0x170 ../test_bsp/\libhal_bsp.a(alt_iic.o)
- .debug_loc     0x00000000000001cb      0x193 ../test_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
- .debug_loc     0x000000000000035e       0x72 ../test_bsp/\libhal_bsp.a(alt_irq_handler.o)
- .debug_loc     0x00000000000003d0       0x21 ../test_bsp/\libhal_bsp.a(alt_sys_init.o)
- .debug_loc     0x00000000000003f1       0x65 ../test_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_loc     0x0000000000000000      0x135 obj/default/hello_world_small.o
+ .debug_loc     0x0000000000000135      0x170 ../test_bsp/\libhal_bsp.a(alt_iic.o)
+ .debug_loc     0x00000000000002a5      0x193 ../test_bsp/\libhal_bsp.a(alt_iic_isr_register.o)
+ .debug_loc     0x0000000000000438       0x72 ../test_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_loc     0x00000000000004aa       0x21 ../test_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_loc     0x00000000000004cb       0x65 ../test_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -546,11 +550,11 @@ LOAD e:/basura/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/
                 [!provide]                        PROVIDE (__alt_heap_limit, 0x4000)
 OUTPUT(test.elf elf32-littlenios2)
 
-.debug_ranges   0x0000000000000000      0x120
+.debug_ranges   0x0000000000000000      0x1a0
  .debug_ranges  0x0000000000000000       0x20 ../test_bsp//obj/HAL/src/crt0.o
- .debug_ranges  0x0000000000000020       0x38 obj/default/hello_world_small.o
- .debug_ranges  0x0000000000000058       0x28 ../test_bsp/\libhal_bsp.a(alt_irq_entry.o)
- .debug_ranges  0x0000000000000080       0x10 ../test_bsp/\libhal_bsp.a(alt_irq_handler.o)
- .debug_ranges  0x0000000000000090       0x48 ../test_bsp/\libhal_bsp.a(alt_load.o)
- .debug_ranges  0x00000000000000d8       0x30 ../test_bsp/\libhal_bsp.a(alt_exception_entry.o)
- .debug_ranges  0x0000000000000108       0x18 ../test_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
+ .debug_ranges  0x0000000000000020       0xb8 obj/default/hello_world_small.o
+ .debug_ranges  0x00000000000000d8       0x28 ../test_bsp/\libhal_bsp.a(alt_irq_entry.o)
+ .debug_ranges  0x0000000000000100       0x10 ../test_bsp/\libhal_bsp.a(alt_irq_handler.o)
+ .debug_ranges  0x0000000000000110       0x48 ../test_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_ranges  0x0000000000000158       0x30 ../test_bsp/\libhal_bsp.a(alt_exception_entry.o)
+ .debug_ranges  0x0000000000000188       0x18 ../test_bsp/\libhal_bsp.a(alt_instruction_exception_entry.o)
