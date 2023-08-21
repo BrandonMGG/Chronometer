@@ -17,9 +17,11 @@ static int digit4=0;
 static int digit5=0;
 static int digit6=0;
 
-static void timer_isr(void *context)
+static int run=0;
+
+static void timer_isr()
 {
-(void) context;
+
 	leds = leds << 1 | (IORD_ALTERA_AVALON_PIO_DATA(SWITCH_BASE) & 1);
 	IOWR_ALTERA_AVALON_PIO_DATA(PIO_0_BASE, leds);
 
@@ -197,11 +199,21 @@ int displayShow6(int counter){
 		}
 		return display6;
 }
+static void run_isr(void *context){
+	(void) context;
+	if((IORD_ALTERA_AVALON_PIO_DATA(BTN_BASE) & 1)){
+		run=1;
+		timer_isr();
+	}else{
+		run=0;
+	}
+
+}
 int main(){
 	alt_ic_isr_register(
 		TIMER_0_IRQ_INTERRUPT_CONTROLLER_ID,
 		TIMER_0_IRQ,
-		timer_isr,
+		run_isr,
 		NULL,
 		NULL);
 	IOWR_ALTERA_AVALON_TIMER_CONTROL(
