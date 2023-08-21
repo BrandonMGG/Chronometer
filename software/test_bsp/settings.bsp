@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Aug 21, 2023 2:35:38 AM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1692606938082</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Aug 21, 2023 9:59:08 AM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1692633548465</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\Brandon\Desktop\Chronometer\software\test_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\platform.sopcinfo</SopcDesignFile>
@@ -893,50 +893,62 @@
                 <attributes>timer</attributes>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>pio_0</slaveDescriptor>
+                <slaveDescriptor>BTN</slaveDescriptor>
                 <addressRange>0x00005020 - 0x0000502F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>seven_seg5</slaveDescriptor>
+                <slaveDescriptor>SWITCH2</slaveDescriptor>
                 <addressRange>0x00005030 - 0x0000503F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>seven_seg4</slaveDescriptor>
+                <slaveDescriptor>pio_0</slaveDescriptor>
                 <addressRange>0x00005040 - 0x0000504F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>seven_seg3</slaveDescriptor>
+                <slaveDescriptor>seven_seg5</slaveDescriptor>
                 <addressRange>0x00005050 - 0x0000505F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>seven_seg2</slaveDescriptor>
+                <slaveDescriptor>seven_seg4</slaveDescriptor>
                 <addressRange>0x00005060 - 0x0000506F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>seven_seg1</slaveDescriptor>
+                <slaveDescriptor>seven_seg3</slaveDescriptor>
                 <addressRange>0x00005070 - 0x0000507F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>SWITCH</slaveDescriptor>
+                <slaveDescriptor>seven_seg2</slaveDescriptor>
                 <addressRange>0x00005080 - 0x0000508F</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>seven_seg0</slaveDescriptor>
+                <slaveDescriptor>seven_seg1</slaveDescriptor>
                 <addressRange>0x00005090 - 0x0000509F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>SWITCH</slaveDescriptor>
+                <addressRange>0x000050A0 - 0x000050AF</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>seven_seg0</slaveDescriptor>
+                <addressRange>0x000050B0 - 0x000050BF</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>

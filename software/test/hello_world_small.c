@@ -22,14 +22,19 @@ static void timer_isr(void *context)
 (void) context;
 	leds = leds << 1 | (IORD_ALTERA_AVALON_PIO_DATA(SWITCH_BASE) & 1);
 	IOWR_ALTERA_AVALON_PIO_DATA(PIO_0_BASE, leds);
-	display = displayShow(digit);
-	digit+=1;
- if((IORD_ALTERA_AVALON_PIO_DATA(SWITCH_BASE) & 1)){
+
+ if((IORD_ALTERA_AVALON_PIO_DATA(SWITCH_BASE) & 1) && !(IORD_ALTERA_AVALON_PIO_DATA(SWITCH2_BASE) & 1) ){
+	 display = displayShow(digit);
+	 digit+=1;
 	 IOWR_ALTERA_AVALON_PIO_DATA(SEVEN_SEG0_BASE, display);
 	 IOWR_ALTERA_AVALON_PIO_DATA(SEVEN_SEG1_BASE, display2);
  }
-	IOWR_ALTERA_AVALON_PIO_DATA(SEVEN_SEG2_BASE, display3);
-	IOWR_ALTERA_AVALON_PIO_DATA(SEVEN_SEG3_BASE, display4);
+ else if(!(IORD_ALTERA_AVALON_PIO_DATA(SWITCH_BASE) & 1) && (IORD_ALTERA_AVALON_PIO_DATA(SWITCH2_BASE) & 1) ){
+	 display = displayShow(digit);
+	 digit+=1;
+ }
+	//IOWR_ALTERA_AVALON_PIO_DATA(SEVEN_SEG2_BASE, display3);
+	//IOWR_ALTERA_AVALON_PIO_DATA(SEVEN_SEG3_BASE, display4);
 	IOWR_ALTERA_AVALON_PIO_DATA(SEVEN_SEG4_BASE, display5);
 	IOWR_ALTERA_AVALON_PIO_DATA(SEVEN_SEG5_BASE, display6);
 	IOWR_ALTERA_AVALON_TIMER_STATUS(TIMER_0_BASE, 0);
@@ -63,7 +68,7 @@ int displayShow(int counter){
 	return display;
 }
 int displayShow2(int counter){
-	if (digit2 == 0) {
+		if (digit2 == 0) {
 		    display2 = 64;
 		    display3 = displayShow3(digit3);
 		} else if (digit2 == 1) {
@@ -84,37 +89,45 @@ int displayShow2(int counter){
 		    display2 = 0;
 		} else if (digit2 == 9 ) {
 		    display2 = 24;
-		    digit3+=1;
+		    if((IORD_ALTERA_AVALON_PIO_DATA(SWITCH2_BASE) & 1)){
+		    	 digit3+=1;
+		    }
 		    digit2=-1;
 		}
 		return display2;
 }
 int displayShow3(int counter){
-	if (digit3 == 0) {
-	    display3 = 64;
-	    display4 = displayShow4(digit4);
-	} else if (digit3 == 1) {
-		display3 = 121;
-	} else if (digit3 == 2) {
-		display3 = 36;
-	} else if (digit3 == 3) {
-		display3 = 48;
-	} else if (digit3 == 4) {
-		display3 = 25;
-	} else if (digit3 == 5) {
-		display3 = 18;
-	} else if (digit3 == 6) {
-		display3 = 2;
-	} else if (digit3 == 7) {
-		display3 = 120;
-	} else if (digit3 == 8) {
-		display3 = 0;
-	} else if (digit3 == 9 ) {
-		display3 = 24;
-	    digit3=-1;
+	if((IORD_ALTERA_AVALON_PIO_DATA(SWITCH2_BASE) & 1)){
+		if (digit3 == 0) {
+			display3 = 64;
+			display4 = displayShow4(digit4);
+		} else if (digit3 == 1) {
+			display3 = 121;
+		} else if (digit3 == 2) {
+			display3 = 36;
+		} else if (digit3 == 3) {
+			display3 = 48;
+		} else if (digit3 == 4) {
+			display3 = 25;
+		} else if (digit3 == 5) {
+			display3 = 18;
+		} else if (digit3 == 6) {
+			display3 = 2;
+		} else if (digit3 == 7) {
+			display3 = 120;
+		} else if (digit3 == 8) {
+			display3 = 0;
+		} else if (digit3 == 9 ) {
+			display3 = 24;
+			digit3=-1;
 
-	    digit4+=1;
+			digit4+=1;
+		}
+	}else {
+		return display3;
 	}
+	IOWR_ALTERA_AVALON_PIO_DATA(SEVEN_SEG2_BASE, display3);
+	IOWR_ALTERA_AVALON_PIO_DATA(SEVEN_SEG3_BASE, display4);
 	return display3;
 }
 int displayShow4(int counter){

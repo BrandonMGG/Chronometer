@@ -4,7 +4,7 @@
  * Machine generated for CPU 'CPU' in SOPC Builder design 'platform'
  * SOPC Builder design path: ../../platform.sopcinfo
  *
- * Generated: Mon Aug 21 02:21:28 CST 2023
+ * Generated: Mon Aug 21 08:27:27 CST 2023
  */
 
 /*
@@ -53,6 +53,33 @@
 
 /* Include definitions from linker script generator */
 #include "linker.h"
+
+
+/*
+ * BTN configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_BTN altera_avalon_pio
+#define BTN_BASE 0x5020
+#define BTN_BIT_CLEARING_EDGE_REGISTER 0
+#define BTN_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define BTN_CAPTURE 0
+#define BTN_DATA_WIDTH 1
+#define BTN_DO_TEST_BENCH_WIRING 0
+#define BTN_DRIVEN_SIM_VALUE 0
+#define BTN_EDGE_TYPE "NONE"
+#define BTN_FREQ 50000000
+#define BTN_HAS_IN 1
+#define BTN_HAS_OUT 0
+#define BTN_HAS_TRI 0
+#define BTN_IRQ -1
+#define BTN_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define BTN_IRQ_TYPE "NONE"
+#define BTN_NAME "/dev/BTN"
+#define BTN_RESET_VALUE 0
+#define BTN_SPAN 16
+#define BTN_TYPE "altera_avalon_pio"
 
 
 /*
@@ -203,7 +230,7 @@
  */
 
 #define ALT_MODULE_CLASS_SWITCH altera_avalon_pio
-#define SWITCH_BASE 0x5080
+#define SWITCH_BASE 0x50a0
 #define SWITCH_BIT_CLEARING_EDGE_REGISTER 0
 #define SWITCH_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define SWITCH_CAPTURE 0
@@ -222,6 +249,33 @@
 #define SWITCH_RESET_VALUE 0
 #define SWITCH_SPAN 16
 #define SWITCH_TYPE "altera_avalon_pio"
+
+
+/*
+ * SWITCH2 configuration
+ *
+ */
+
+#define ALT_MODULE_CLASS_SWITCH2 altera_avalon_pio
+#define SWITCH2_BASE 0x5030
+#define SWITCH2_BIT_CLEARING_EDGE_REGISTER 0
+#define SWITCH2_BIT_MODIFYING_OUTPUT_REGISTER 0
+#define SWITCH2_CAPTURE 0
+#define SWITCH2_DATA_WIDTH 1
+#define SWITCH2_DO_TEST_BENCH_WIRING 0
+#define SWITCH2_DRIVEN_SIM_VALUE 0
+#define SWITCH2_EDGE_TYPE "NONE"
+#define SWITCH2_FREQ 50000000
+#define SWITCH2_HAS_IN 1
+#define SWITCH2_HAS_OUT 0
+#define SWITCH2_HAS_TRI 0
+#define SWITCH2_IRQ -1
+#define SWITCH2_IRQ_INTERRUPT_CONTROLLER_ID -1
+#define SWITCH2_IRQ_TYPE "NONE"
+#define SWITCH2_NAME "/dev/SWITCH2"
+#define SWITCH2_RESET_VALUE 0
+#define SWITCH2_SPAN 16
+#define SWITCH2_TYPE "altera_avalon_pio"
 
 
 /*
@@ -271,7 +325,7 @@
  */
 
 #define ALT_MODULE_CLASS_pio_0 altera_avalon_pio
-#define PIO_0_BASE 0x5020
+#define PIO_0_BASE 0x5040
 #define PIO_0_BIT_CLEARING_EDGE_REGISTER 0
 #define PIO_0_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define PIO_0_CAPTURE 0
@@ -298,7 +352,7 @@
  */
 
 #define ALT_MODULE_CLASS_seven_seg0 altera_avalon_pio
-#define SEVEN_SEG0_BASE 0x5090
+#define SEVEN_SEG0_BASE 0x50b0
 #define SEVEN_SEG0_BIT_CLEARING_EDGE_REGISTER 0
 #define SEVEN_SEG0_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define SEVEN_SEG0_CAPTURE 0
@@ -325,7 +379,7 @@
  */
 
 #define ALT_MODULE_CLASS_seven_seg1 altera_avalon_pio
-#define SEVEN_SEG1_BASE 0x5070
+#define SEVEN_SEG1_BASE 0x5090
 #define SEVEN_SEG1_BIT_CLEARING_EDGE_REGISTER 0
 #define SEVEN_SEG1_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define SEVEN_SEG1_CAPTURE 0
@@ -352,7 +406,7 @@
  */
 
 #define ALT_MODULE_CLASS_seven_seg2 altera_avalon_pio
-#define SEVEN_SEG2_BASE 0x5060
+#define SEVEN_SEG2_BASE 0x5080
 #define SEVEN_SEG2_BIT_CLEARING_EDGE_REGISTER 0
 #define SEVEN_SEG2_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define SEVEN_SEG2_CAPTURE 0
@@ -379,7 +433,7 @@
  */
 
 #define ALT_MODULE_CLASS_seven_seg3 altera_avalon_pio
-#define SEVEN_SEG3_BASE 0x5050
+#define SEVEN_SEG3_BASE 0x5070
 #define SEVEN_SEG3_BIT_CLEARING_EDGE_REGISTER 0
 #define SEVEN_SEG3_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define SEVEN_SEG3_CAPTURE 0
@@ -406,7 +460,7 @@
  */
 
 #define ALT_MODULE_CLASS_seven_seg4 altera_avalon_pio
-#define SEVEN_SEG4_BASE 0x5040
+#define SEVEN_SEG4_BASE 0x5060
 #define SEVEN_SEG4_BIT_CLEARING_EDGE_REGISTER 0
 #define SEVEN_SEG4_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define SEVEN_SEG4_CAPTURE 0
@@ -433,7 +487,7 @@
  */
 
 #define ALT_MODULE_CLASS_seven_seg5 altera_avalon_pio
-#define SEVEN_SEG5_BASE 0x5030
+#define SEVEN_SEG5_BASE 0x5050
 #define SEVEN_SEG5_BIT_CLEARING_EDGE_REGISTER 0
 #define SEVEN_SEG5_BIT_MODIFYING_OUTPUT_REGISTER 0
 #define SEVEN_SEG5_CAPTURE 0
