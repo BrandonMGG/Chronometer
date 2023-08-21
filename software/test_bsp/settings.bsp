@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Aug 21, 2023 9:59:08 AM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1692633548465</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Aug 21, 2023 10:08:30 AM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1692634110670</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\Brandon\Desktop\Chronometer\software\test_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\platform.sopcinfo</SopcDesignFile>
