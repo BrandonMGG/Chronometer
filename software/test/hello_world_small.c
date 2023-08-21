@@ -12,6 +12,13 @@ static void timer_isr(void *context)
 (void) context;
 	leds = leds << 1 | (IORD_ALTERA_AVALON_PIO_DATA(SWITCH_BASE) & 1);
 	IOWR_ALTERA_AVALON_PIO_DATA(PIO_0_BASE, leds);
+	display = displayShow(digit);
+	digit+=1;
+
+	IOWR_ALTERA_AVALON_PIO_DATA(SEVEN_SEG2_BASE, display);
+	IOWR_ALTERA_AVALON_TIMER_STATUS(TIMER_0_BASE, 0);
+}
+int displayShow(int counter){
 	if (digit == 0) {
 	    display = 64;
 	} else if (digit == 1) {
@@ -32,11 +39,9 @@ static void timer_isr(void *context)
 	    display = 0;
 	} else if (digit == 9) {
 	    display = 24;
-	    digit=0;
+	    digit=-1;
 	}
-	digit+=1;
-	IOWR_ALTERA_AVALON_PIO_DATA(SEVEN_SEG1_BASE, display);
-	IOWR_ALTERA_AVALON_TIMER_STATUS(TIMER_0_BASE, 0);
+	return display;
 }
 int main(){
 	alt_ic_isr_register(
